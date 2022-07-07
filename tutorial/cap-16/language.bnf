@@ -1,0 +1,9 @@
+addop ::= '+' | '-' | '|' | '~'
+mulop ::= '*' | '/' | '&'
+
+factor      ::= variable | constant | '(' expression ')'
+notFactor   ::= [!] factor
+signedTerm  ::= [addop] term
+term        ::= notFactor (mulop notFactor)*
+expression  ::= signedTerm (addop term)*
+assignment  ::= variable '=' expression
