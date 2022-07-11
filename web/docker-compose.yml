@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  app:
+    image: node:lts
+    working_dir: /node/app
+    ports:
+      - 80:3333
+    volumes:
+      - .:/node/app
+    command: npm run start
+    environment:
+      - PORT=3333
+      - API_URL=http://host.docker.internal
+    entrypoint: ./entrypoint.sh
+    extra_hosts:
+      - host.docker.internal:host-gateway
