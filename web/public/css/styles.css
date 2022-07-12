@@ -1,3 +1,17 @@
 .white-space {
   white-space: pre;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 1rem;
+}
+
+.grid-item {
+  width: auto;
+}
+
+.tab {
+  margin-left: 2rem;
+}

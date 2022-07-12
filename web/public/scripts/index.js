@@ -1,3 +1,13 @@
+const textarea = document.getElementById("inputCompiler");
+
+textarea.addEventListener("keydown", e => {
+  if (e.key == "Tab") {
+    e.preventDefault();
+
+    textarea.setRangeText("  ", textarea.selectionStart, textarea.selectionStart, "end");
+  }
+});
+
 async function compile() {
   try {
     const inputData = document.getElementById("inputCompiler").value;

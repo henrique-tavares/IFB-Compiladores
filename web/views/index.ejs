@@ -13,7 +13,6 @@
     <script>
       const API_URL = "<%= apiUrl %>";
     </script>
-    <script src="/scripts/index.js"></script>
 
     <title>Compilador Tiny</title>
   </head>
@@ -55,13 +54,120 @@
           Compilar
         </button>
         <div
-          class="card bg-light shadow-sm p-2 d-none w-100 font-monospace white-space"
+          class="card bg-light shadow-sm p-2 d-none w-100 font-monospace white-space mb-5"
           id="outputCompiler"
         ></div>
         <div
-          class="card bg-danger shadow-sm text-light p-2 fw-bold d-none w-100"
+          class="card bg-danger shadow-sm text-light p-2 fw-bold d-none w-100 mb-5"
           id="outputCompilerError"
         ></div>
+      </section>
+      <section class="grid">
+        <div
+          class="card d-flex align-items-center shadow-sm bg-light p-3 border border-primary border-2 grid-item"
+        >
+          <span class="text-dark fw-bold h4 pb-3 text-center">Começando o Programa</span>
+          <div
+            class="card border-0 text-white bg-dark p-2 align-self-stretch d-flex align-items-star"
+          >
+            <small class="font-monospace">
+              PROGRAM;<br />
+              BEGIN<br />
+              END
+            </small>
+          </div>
+        </div>
+        <div
+          class="card d-flex align-items-center shadow-sm bg-light p-3 border border-primary border-2 grid-item"
+        >
+          <span class="text-dark fw-bold h4 pb-3 text-center">Declarando variáveis</span>
+          <div
+            class="card border-0 text-white bg-dark p-2 align-self-stretch d-flex align-items-start"
+          >
+            <small class="font-monospace">
+              PROGRAM;<br />
+              VAR a = 1,<br />
+              <span class="tab">b = 2,</span><br />
+              <span class="tab">c = 3;</span><br />
+              BEGIN<br />
+              END
+            </small>
+          </div>
+        </div>
+        <div
+          class="card d-flex align-items-center shadow-sm bg-light p-3 border border-primary border-2 grid-item"
+        >
+          <span class="text-dark fw-bold h4 pb-3 text-center">Escrever na tela</span>
+          <div
+            class="card border-0 text-white bg-dark p-2 align-self-stretch d-flex align-items-start"
+          >
+            <small class="font-monospace">
+              PROGRAM;<br />
+              VAR a = 1,<br />
+              <span class="tab">b = 2;</span><br />
+              BEGIN<br />
+              <span class="tab">WRITE (a + b);</span><br />
+              END
+            </small>
+          </div>
+        </div>
+        <div
+          class="card d-flex align-items-center shadow-sm bg-light p-3 border border-primary border-2 grid-item"
+        >
+          <span class="text-dark fw-bold h4 pb-3 text-center">Ler da tela</span>
+          <div
+            class="card border-0 text-white bg-dark p-2 align-self-stretch d-flex align-items-start"
+          >
+            <small class="font-monospace">
+              PROGRAM;<br />
+              VAR a = 1,<br />
+              <span class="tab">b = 2;</span><br />
+              BEGIN<br />
+              <span class="tab">READ (a);</span><br />
+              END
+            </small>
+          </div>
+        </div>
+        <div
+          class="card d-flex align-items-center shadow-sm bg-light p-3 border border-primary border-2 grid-item"
+        >
+          <span class="text-dark fw-bold h4 pb-3 text-center">IF e IF/ELSE</span>
+          <div
+            class="card border-0 text-white bg-dark p-2 align-self-stretch d-flex align-items-start"
+          >
+            <small class="font-monospace">
+              PROGRAM; <br />
+              VAR a = 1, <br />
+              <span class="tab">b = 2;</span><br />
+              BEGIN <br />
+              IF a > 0 <br />
+              <span class="tab">b = 10;</span><br />
+              ELSE <br />
+              <span class="tab">b = 20;</span><br />
+              ENDIF <br />
+              END
+            </small>
+          </div>
+        </div>
+        <div
+          class="card d-flex align-items-center shadow-sm bg-light p-3 border border-primary border-2 grid-item"
+        >
+          <span class="text-dark fw-bold h4 pb-3 text-center">WHILE</span>
+          <div
+            class="card border-0 text-white bg-dark p-2 align-self-stretch d-flex align-items-start"
+          >
+            <small class="font-monospace">
+              PROGRAM; <br />
+              VAR a = 0; <br />
+              BEGIN <br />
+              WHILE a < 10 <br />
+              <span class="tab">WRITE (a);</span><br />
+              <span class="tab">a = a + 1;</span><br />
+              ENDWHILE <br />
+              END
+            </small>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="bg-dark">
@@ -75,5 +181,7 @@
         </a>
       </div>
     </footer>
+
+    <script src="/scripts/index.js"></script>
   </body>
 </html>
