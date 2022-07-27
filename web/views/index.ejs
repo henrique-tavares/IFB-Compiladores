@@ -86,10 +86,13 @@
           >
             <small class="font-monospace">
               PROGRAM;<br />
-              VAR a = 1,<br />
-              <span class="tab">b = 2,</span><br />
-              <span class="tab">c = 3;</span><br />
+              VAR a,<br />
+              <span class="tab">b,</span><br />
+              <span class="tab">c;</span><br />
               BEGIN<br />
+              <span class="tab">a = 1;</span><br />
+              <span class="tab">b = 2;</span><br />
+              <span class="tab">c = 3;</span><br />
               END
             </small>
           </div>
@@ -103,9 +106,11 @@
           >
             <small class="font-monospace">
               PROGRAM;<br />
-              VAR a = 1,<br />
-              <span class="tab">b = 2;</span><br />
+              VAR a,<br />
+              <span class="tab">b;</span><br />
               BEGIN<br />
+              <span class="tab">a = 1;</span><br />
+              <span class="tab">b = 2;</span><br />
               <span class="tab">WRITE (a + b);</span><br />
               END
             </small>
@@ -120,9 +125,11 @@
           >
             <small class="font-monospace">
               PROGRAM;<br />
-              VAR a = 1,<br />
-              <span class="tab">b = 2;</span><br />
+              VAR a,<br />
+              <span class="tab">b;</span><br />
               BEGIN<br />
+              <span class="tab">a = 1;</span><br />
+              <span class="tab">b = 2;</span><br />
               <span class="tab">READ (a);</span><br />
               END
             </small>
@@ -137,9 +144,11 @@
           >
             <small class="font-monospace">
               PROGRAM; <br />
-              VAR a = 1, <br />
-              <span class="tab">b = 2;</span><br />
+              VAR a, <br />
+              <span class="tab">b;</span><br />
               BEGIN <br />
+              <span class="tab">a = 1;</span><br />
+              <span class="tab">b = 2;</span><br />
               IF a > 0 <br />
               <span class="tab">b = 10;</span><br />
               ELSE <br />
@@ -158,8 +167,9 @@
           >
             <small class="font-monospace">
               PROGRAM; <br />
-              VAR a = 0; <br />
+              VAR a; <br />
               BEGIN <br />
+              <span class="tab">a = 1;</span><br />
               WHILE a < 10 <br />
               <span class="tab">WRITE (a);</span><br />
               <span class="tab">a = a + 1;</span><br />
